@@ -1,7 +1,7 @@
 {
   "name": "v3-html2pdf",
   "description": "Export to PDF using vue3 and html2pdf.js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "src/index.js",
   "author": "fly321456",
   "contributors": [
