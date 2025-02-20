@@ -1,0 +1,1 @@
+!function(t,e){"object"==typeof exports&&"undefined"!=typeof module?module.exports=e(require("v3-html2pdf/src/v3-html2pdf")):"function"==typeof define&&define.amd?define(["v3-html2pdf/src/v3-html2pdf"],e):t.V3Html2pdf=e(t.V3Html2pdf)}(this,function(t){"use strict";return t=t&&t.hasOwnProperty("default")?t.default:t,{install:function(e){e.component("V3Html2pdf",t)}}});
