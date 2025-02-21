@@ -1,7 +1,7 @@
 {
   "name": "v3-html2pdf",
   "description": "Export to PDF using vue3 and html2pdf.js",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "dist/v3-html2pdf.umd.js",
   "module": "dist/v3-html2pdf.es.js",
   "types": "dist/index.d.ts",
