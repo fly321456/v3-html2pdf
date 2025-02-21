@@ -5,6 +5,7 @@ import html2pdf from 'html2pdf.js'
 import { h } from 'vue'
 
 export default {
+  name:"V3Html2pdf",
   props: {
     index: {
       type: Number,

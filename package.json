@@ -1,19 +1,16 @@
 {
   "name": "v3-html2pdf",
   "description": "Export to PDF using vue3 and html2pdf.js",
-  "version": "1.0.4",
-  "main": "src/index.js",
-  "author": "fly321456",
-  "contributors": [
-    "abinhho"
-  ],
+  "version": "1.0.6",
+  "main": "dist/v3-html2pdf.umd.js",
+  "module": "dist/v3-html2pdf.es.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
+  "author": "fly321456",
   "files": [
-    "dist",
-    "src",
-    "type.d.ts"
+    "dist/*",
+    "packages/*"
   ],
-  "types": "./type.d.ts",
   "keywords": [
     "vue",
     "vue html2pdf",
@@ -21,34 +18,28 @@
     "export pdf"
   ],
   "scripts": {
-    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
-    "build:umd": "rollup --config rollup.config.js --format umd --file dist/v3-html2pdf.umd.js",
-    "build:es": "rollup --config rollup.config.js --format es --file dist/v3-html2pdf.esm.js",
-    "build:unpkg": "rollup --config rollup.config.js --format iife --file dist/v3-html2pdf.min.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fly321456/v3-html2pdf"
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build"
   },
   "dependencies": {
-    "html2pdf.js": "^0.10.2",
-    "jspdf": "^3.0.0",
-    "pdf-lib": "^1.17.1",
-    "downloadjs": "^1.4.7"
+    "vue": "^3.5.13"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.0",
-    "@babel/plugin-external-helpers": "^7.0.0",
-    "@babel/preset-env": "^7.1.0",
-    "rollup": "^0.66.2",
-    "rollup-plugin-babel": "^4.0.3",
-    "rollup-plugin-commonjs": "^9.1.8",
-    "rollup-plugin-json": "^3.1.0",
-    "rollup-plugin-node-resolve": "^3.4.0",
-    "rollup-plugin-replace": "^2.0.0",
-    "rollup-plugin-uglify-es": "0.0.1",
-    "rollup-plugin-vue": "^6.0.0",
-    "vue": "^3.4.21",
-    "vue-template-compiler": "^2.7.16"
+    "@tsconfig/node22": "^22.0.0",
+    "@types/node": "^22.13.4",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitejs/plugin-vue-jsx": "^4.1.1",
+    "@vue/tsconfig": "^0.7.0",
+    "html2pdf.js": "^0.10.2",
+    "jspdf": "^3.0.0",
+    "npm-run-all2": "^7.0.2",
+    "typescript": "~5.7.3",
+    "vite": "^6.1.0",
+    "vite-plugin-dts": "^4.5.0",
+    "vite-plugin-vue-devtools": "^7.7.2",
+    "vue-tsc": "^2.2.2"
   }
 }
